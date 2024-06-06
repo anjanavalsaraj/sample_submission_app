@@ -21,5 +21,5 @@
         "report/report.xml"
 
     ],
-    "license": "AGPL-3",
+    "license": "",
 }

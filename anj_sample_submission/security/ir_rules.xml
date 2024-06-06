@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo noupdate="1">
+
+    <record id="sample_submission_personal_rule" model="ir.rule">
+        <field name="name">Show own records</field>
+        <field ref="model_sample_submission_form" name="model_id"/>
+        <field name="domain_force">['|',('user_id','=',user.id),('user_id','=',False)]</field>
+        <field name="groups" eval="[(4, ref('anj_sample_submission.group_own_documents'))]"/>
+    </record>
+    <record id="sample_submission_all" model="ir.rule">
+        <field name="name">All Records</field>
+        <field ref="model_sample_submission_form" name="model_id"/>
+        <field name="domain_force">[(1,'=',1)]</field>
+        <field name="groups" eval="[(4, ref('anj_sample_submission.group_all_documents'))]"/>
+    </record>
+
+</odoo>

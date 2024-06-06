@@ -1,0 +1,31 @@
+<odoo>
+    <record id="materials_required_view" model="ir.ui.view">
+        <field name="name">materials.required.view</field>
+        <field name="model">materials.required</field>
+        <field name="arch" type="xml">
+            <form string="Create Rqquired Materials">
+                <group>
+                    <group>
+                        <field name="product_id" required="1"/>
+                        <field name="quantity" required="1"/>
+                        <field name="remarks"/>
+                    </group>
+
+                </group>
+                <footer>
+                    <button name="create_required_material_lines" string="Save" class="btn-primary" type="object"/>
+                    <button string="Cancel" class="btn-primary" special="cancel"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="materials_required_action" model="ir.actions.act_window">
+        <field name="name">Create Required Materials</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">materials.required</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="materials_required_view"/>
+        <field name="target">new</field>
+    </record>
+</odoo>

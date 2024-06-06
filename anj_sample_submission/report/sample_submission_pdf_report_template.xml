@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="sample_submission_report_template">
+        <t t-call="web.html_container">
+            <t t-call="anj_sample_submission.sample_submission_layout_id">
+                <div class="page">
+                    <center>
+                        <br/>
+                        <span t-esc="data['start_date']"/>
+                        to
+                        <span t-esc="data['end_date']"/>
+                    </center>
+                    <table width="100%" style="border-bottom:1px solid black;">
+                        <tr>
+                            <th style="border-bottom:1px solid black;border-top:1px solid black;text-align:left;padding-top:10px;padding-bottom:10px;width:105px;padding-left:10px;">
+                                Date
+                            </th>
+                            <th style="border-bottom:1px solid black;border-top:1px solid black;text-align:left;padding-left:10px;">
+                                Customer
+                            </th>
+                            <th style="border-bottom:1px solid black;border-top:1px solid black;text-align:left;padding-left:10px;">
+                                Name
+                            </th>
+                            <th style="border-bottom:1px solid black;border-top:1px solid black;text-align:right;">
+                                Price
+                            </th>
+                        </tr>
+
+                        <tr t-foreach="data['sample_datas']" t-as="sample">
+                            <td style="text-align:left;padding-top:10px;padding-bottom:10px;padding-left:10px;">
+                                <span t-esc="sample['date']"/>
+                            </td>
+                            <td style="text-align:left;padding-left:10px;">
+                                <span t-esc="sample['customer_name']"/>
+                            </td>
+                            <td style="text-align:left;padding-left:10px;">
+                                <span t-esc="sample['name']"/>
+                            </td>
+                            <td style="text-align:right;">
+                                <span t-esc="sample['price']"/>
+                            </td>
+                        </tr>
+                    </table>
+                </div>
+            </t>
+        </t>
+    </template>
+</odoo>

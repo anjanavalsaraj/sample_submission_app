@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <report
+            id="sample_submission_report_pdf"
+            string="Sample Submission PDF Report"
+            model="report.wizard"
+            report_type="qweb-pdf"
+            file="anj_sample_submission.sample_submission_report_template"
+            name="anj_sample_submission.sample_submission_report_template"
+    />
+
+
+        <report
+                id="sample_submission_report_xlsx"
+                string="Sample Submission Report Xlsx"
+                model="report.wizard"
+                report_type="xlsx"
+                file="Sample Submission Report"
+                name="sample.submission.report.xlsx"
+        />
+</odoo>

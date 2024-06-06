@@ -1,0 +1,35 @@
+<odoo>
+    <record id="report_wizard_view" model="ir.ui.view">
+        <field name="name">report.wizard.view</field>
+        <field name="model">report.wizard</field>
+        <field name="arch" type="xml">
+            <form string="Generate Report">
+                <group>
+                    <group>
+                        <field name="start_date" required="1"/>
+                        <field name="end_date" required="1"/>
+                    </group>
+
+                </group>
+                <footer>
+                    <button name="get_report_pdf" string="Download PDF" class="btn-primary" type="object"/>
+                    <button name="get_report_xlsx" string="Download Excel" class="btn-primary" type="object"/>
+                </footer>
+            </form>
+        </field>
+    </record>
+
+    <record id="report_wizard_action" model="ir.actions.act_window">
+        <field name="name">Generate Report</field>
+        <field name="type">ir.actions.act_window</field>
+        <field name="res_model">report.wizard</field>
+        <field name="view_mode">form</field>
+        <field name="view_id" ref="report_wizard_view"/>
+        <field name="target">new</field>
+    </record>
+
+            <menuitem id="report_wizard_menu" name="Reports"
+                  action="anj_sample_submission.report_wizard_action" sequence="2"
+                  parent="anj_sample_submission.sample_submission_menu" groups="anj_sample_submission.group_manager"
+        />
+</odoo>

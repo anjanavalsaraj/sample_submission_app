@@ -1,0 +1,18 @@
+<odoo>
+    <record id="invoice_confirm_wizard_view" model="ir.ui.view">
+        <field name="name">create.invoice.confirm.view</field>
+        <field name="model">invoice.confirm</field>
+        <field name="arch" type="xml">
+            <form string="Confirm">
+                <field name="sample_submission_form_id" invisible="1"/>
+                    <span>Are you sure you want to create invoice?</span>
+            <footer>
+                <button name="action_create_invoice" string="Ok" class="btn-primary" type="object"/>
+                <button string="Cancel" class="btn-primary" special="cancel"/>
+            </footer>
+            </form>
+        </field>
+    </record>
+
+
+</odoo>

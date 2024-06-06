@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access.sample.submission.form,access.sample.submission.form,model_sample_submission_form,base.group_user,1,1,1,1
+access.sample.submission.materials,access.sample.submission.materials,model_sample_submission_materials,base.group_user,1,1,1,1
+access.materials.required,access.materials.required,model_materials_required,base.group_user,1,1,1,1
+access.report.wizard,access.report.wizard,model_report_wizard,base.group_user,1,1,1,1
+access.invoice.confirm,access.invoice.confirm,model_invoice_confirm,base.group_user,1,1,1,1
+

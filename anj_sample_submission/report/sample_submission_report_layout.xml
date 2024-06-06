@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <template id="sample_submission_layout_id">
+            <div class="header" style="font-family:Almarai;">
+                <div class="row">
+                    <center style="width:50%;"><img src="/anj_sample_submission/static/description/Sample.png" style="max-height: 100px;width: 300px;margin-right:3000px;"/><br/>
+                    </center>
+                </div>
+
+            </div>
+            <div class="article">
+                <t t-raw="0"/>
+            </div>
+             <div class="footer" style="font-family:Arial;font-size:15px;">
+                 <div class="last-page">
+                 </div>
+            </div>
+        </template>
+    </data>
+</odoo>
